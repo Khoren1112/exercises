@@ -17,7 +17,8 @@
         to the column below.
       </v-col>
       <v-col cols="12">
-        <!-- Your code here -->
+        
+        
       </v-col>
     </v-row>
 
@@ -42,6 +43,9 @@
       </v-col>
       <v-col cols="12">
         <!-- Your code here -->
+        <Counter/> {{count}}
+         
+       
       </v-col>
     </v-row>
 
@@ -55,7 +59,7 @@
         <a href="https://vuejs.org/v2/guide/components-slots.html" target="_blank">For reference</a>
       </v-col>
       <v-col cols="12">
-        <!-- Your code here -->
+        <!-- Your code here --><Counter v-bind:color="color">Submit</Counter>
       </v-col>
     </v-row>
 
@@ -70,6 +74,7 @@
       </v-col>
       <v-col cols="12">
         <!-- Your code here -->
+         <v-select v-model="color" :items="items" label="Standard"></v-select> {{color}}
       </v-col>
     </v-row>
 
@@ -111,10 +116,18 @@
 </template>
 
 <script>
+import Counter from '../components/Counter'
+
 export default {
+  components:{
+    Counter
+  },
   name: 'ExerciseTwo',
 
   data: () => ({
-  })
+    count:0,
+     items: ['red', 'blue', 'green', 'yellow'],
+     color:null
+  }),
 }
 </script>
