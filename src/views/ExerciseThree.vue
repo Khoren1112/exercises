@@ -35,7 +35,14 @@
         <a href="https://vuetifyjs.com/en/components/text-fields#icons" target="_blank">For reference</a>
       </v-col>
       <v-col cols="12">
-        <!-- Your code here -->
+    <v-text-field
+    v-model="students"
+    label="Add Student"
+    @click:append-outor="Marker"
+            append-icon="place"
+            append-outer-icon="+"
+
+          ></v-text-field>
       </v-col>
     </v-row>
 
@@ -87,7 +94,13 @@ export default {
   name: 'ExerciseThree',
 
   data: () => ({
-    students: []
-  })
-}
+    students: ['Aram','Hayk','Abraham']
+  
+  }),
+  methods: {
+      Marker () {
+        this.student = Push(this.students)
+        
+      },
+}}
 </script>

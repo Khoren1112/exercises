@@ -44,7 +44,7 @@
       <v-col cols="12">
         <!-- Your code here -->
         <Counter/> {{count}}
-         
+        <Counter/> {{count}} 
        
       </v-col>
     </v-row>
@@ -126,7 +126,13 @@ export default {
 
   data: () => ({
     count:0,
-     items: ['red', 'blue', 'green', 'yellow'],
+     items: [
+      {text: 'Green', value: 'green' }, 
+     {text: 'Red', value: 'red' } ,
+     {text: 'Blue', value: 'blue' } ,
+     {text: 'Yellow', value: 'yellow' } ,
+
+     ],
      color:null
   }),
 }

@@ -18,9 +18,11 @@
         It doesn't have to be pretty, just get the basic outline (don't forget the login button).
         Also import that newly-created component into this one and add it in the
         column below so we can see what it looks like.
+      
+      
       </v-col>
       <v-col cols="12">
-        <!-- Your code here -->
+ <Login></Login>
       </v-col>
     </v-row>
 
@@ -110,6 +112,7 @@
 </template>
 
 <script>
+import Login from '../components/Login.vue'
 export default {
   name: 'ExerciseFour',
 
